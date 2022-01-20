@@ -1,11 +1,23 @@
-.nav-bar {
+.navbar-left {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
+  position: absolute;
+}
+
+.navbar-right {
+  display: flex;
+  position: absolute;
+  right: 10px;
 }
 
 .nav-btn {
   margin-top: -10px;
+  cursor: pointer;
+}
+
+.nav-btn h2 {
+  margin-top: 29px;
   cursor: pointer;
 }
 
@@ -14,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-.loginbtn h4 {
+.loginbtn h2 {
   border: 1px solid;
   border-radius: 5px;
 }
