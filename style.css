@@ -3,3 +3,12 @@
   flex-direction: row;
   justify-content: space-around;
 }
+
+.nav-btn {
+  cursor: pointer;
+}
+
+.nav-btn a {
+  color: black;
+  text-decoration: none;
+}
