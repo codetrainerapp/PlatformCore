@@ -5,10 +5,16 @@
 }
 
 .nav-btn {
+  margin-top: -10px;
   cursor: pointer;
 }
 
 a {
   color: black;
   text-decoration: none;
+}
+
+.loginbtn h4 {
+  border: 1px solid;
+  border-radius: 5px;
 }
