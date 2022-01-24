@@ -54,9 +54,29 @@ a {
 }
 
 .headerimg {
-  width: 221px;
-  height: 538px;
+  width: 294.6px;
+  height: 358.6px;
   position: absolute;
   right: 20%;
-  top: -10%;
+  top: 0%;
+}
+
+.btntrans {
+  position: absolute;
+  width: 205px;
+  height: 48px;
+  border: 0.5px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: rgba(100, 100, 100, 0);
+  color: white;
+  font-size: 18px;
+  margin-left: 10%;
+  cursor: pointer;
+  transition: color 0.5s, background 0.5s;
+}
+
+.btntrans:hover {
+  background-color: white;
+  color: black;
 }
