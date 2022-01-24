@@ -47,3 +47,16 @@ a {
   background: linear-gradient(135deg, #EE9AE5 0%, #5961F9 100%);
   border-radius: 48px 48px 300px 48px;
 }
+
+.title {
+  font-size: 50pt;
+  color: white;
+}
+
+.headerimg {
+  width: 221px;
+  height: 538px;
+  position: absolute;
+  right: 20%;
+  top: -10%;
+}

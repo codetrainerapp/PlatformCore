@@ -1,4 +1,4 @@
-#CodingTrainer
+###CodingTrainer
 
 Developers/Administrators:
 
@@ -10,12 +10,12 @@ https://github.com/orgs/codingtrainer-app/people/NonzeroCornet
 
 
 
-Licensed under the terms of the MIT License (find in LICENSE.md)
+Licensed under the terms of the MIT License
 
 
 
-"CodeTrainer" may refer to the CodeTrainer Discord, CodingTrainer Administrators; ace, NonzeroCornet, hodss, or website/domain.
+"CodingTrainer" may refer to the CodingTrainer Discord, CodingTrainer Administrators; ace, NonzeroCornet, hodss, or website/domain.
 
 
 
-Copyright (C) 2022 CodeTrainer
+Copyright (C) 2022 CodingTrainer
