@@ -6,7 +6,10 @@
       name="description"
       content="Willkommen an einem Ort, an dem Sie Ihre Fähigkeiten verbessern oder etwas Neues lernen können! Willkommen bei CodeTrainer!"
     />
-    <meta name="keywords" content="Kodierung trainer code Lernen Webseite Programmierung" />
+    <meta
+      name="keywords"
+      content="Kodierung trainer code Lernen Webseite Programmierung"
+    />
     <link href="style.css" rel="stylesheet" />
     <link
       rel="icon"
@@ -15,26 +18,48 @@
     />
     <script src="front.js"></script>
     <script>
-      var lang = window.navigator.language.split("")[0]+window.navigator.language.split("")[1];
-      if(lang == "en" || lang == "de" || lang == "ga") {
-        window.location.href = "/" + lang + ".html";
-      } else {
-        window.location.href = "/langunsupported.html";
+      async function translate() {
+        const res = await fetch("https://libretranslate.de/translate", {
+          method: "POST",
+          body: JSON.stringify({
+            q: "We are sorry, your language is not supported. More languages will be supported in the future. Please continue in either German, English, or Gaelic. Thank you.",
+            source: "en",
+            target: window.navigator.language.split("")[0]+window.navigator.language.split("")[1],
+            format: "text",
+          }),
+          headers: { "Content-Type": "application/json" },
+        });
+        var output = await res.json();
+        alert(output.translatedText);
       }
+      translate();
     </script>
   </head>
   <body>
     <div class="navbar-left">
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
-        style="width: 10%; height: 10%; margin-left: 5%; margin-top: -1%; cursor: pointer"
+        style="
+          width: 10%;
+          height: 10%;
+          margin-left: 5%;
+          margin-top: -1%;
+          cursor: pointer;
+        "
         onclick="window.location.reload()"
       />
       <div class="nav-btn" style="margin-left: -10%">
         <h1><a href="/">CodeTrainer</a></h1>
       </div>
       <div class="nav-btn">
-        <h2><a href="https://discord.com/invite/R8hwAs9JrE" target="_blank" id="discordbtn">Gemeinschaft</a></h2>
+        <h2>
+          <a
+            href="https://discord.com/invite/R8hwAs9JrE"
+            target="_blank"
+            id="discordbtn"
+            >Gemeinschaft</a
+          >
+        </h2>
       </div>
       <div class="nav-btn">
         <h2 onclick="apologizeDe(this.innerHTML)">Pläne</h2>
@@ -51,7 +76,12 @@
         <h2>English&nbsp;</h2>
       </div>
       <div class="nav-btn loginbtn">
-        <h2 onclick="apologizeDe('Anmeldung')" style="width: 140px; text-align: center">&nbsp;Anmeldung&nbsp;</h2>
+        <h2
+          onclick="apologizeDe('Anmeldung')"
+          style="width: 140px; text-align: center"
+        >
+          &nbsp;Anmeldung&nbsp;
+        </h2>
       </div>
     </div>
     <div class="fancyrect">
@@ -62,17 +92,32 @@
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
         class="headerimg"
       />
-      <input class="btntrans" type="button" value="Discord" onclick="openDiscord()" /><br><br><br><br><br>
-      <h1 style="margin-right: 0px;">
-      Diese Seite befindet sich derzeit im Aufbau! Um Updates zu verfolgen oder zu helfen, wenn Sie helfen möchten, treten Sie bitte unserem Discord bei oder gehen Sie zu <a style="color: #0096FF" href="https://codetrainer.42web.io/" target="_blank">https://codetrainer.42web.io/</a>. Fröhliches Programmieren!<br><br> - Das CodeTrainer Team
-    </h1><br><br><br><br><br>
+      <input
+        class="btntrans"
+        type="button"
+        value="Discord"
+        onclick="openDiscord()"
+      /><br /><br /><br /><br /><br />
+      <h1 style="margin-right: 0px">
+        Diese Seite befindet sich derzeit im Aufbau! Um Updates zu verfolgen
+        oder zu helfen, wenn Sie helfen möchten, treten Sie bitte unserem
+        Discord bei oder gehen Sie zu
+        <a
+          style="color: #0096ff"
+          href="https://codetrainer.42web.io/"
+          target="_blank"
+          >https://codetrainer.42web.io/</a
+        >. Fröhliches Programmieren!<br /><br />
+        - Das CodeTrainer Team
+      </h1>
+      <br /><br /><br /><br /><br />
     </div>
-    
+
     <!-- This is just temporary until release -->
     <!-- <h1 style="position: absolute; top: 50%; left: 80px; margin-right: 0px;">
       This site is currently under developement! To follow updates, or to help out if you want to help, please join our discord or go to <a style="color: #0096FF" href="https://codetrainer.42web.io/" target="_blank">https://codetrainer.42web.io/</a>. Happy coding!<br><br> - The CodeTrainer Team
     </h1> -->
-    
+
     <!-- This will happen once we figure everything out and, more likely, upon release.
     <div style="position: absolute; top: 50%; left: 40px">
       <p class="header2 bolder">
@@ -87,15 +132,49 @@
       </p>
     </div>-->
     <footer>
-      <h1><a href="/" style="color: white; margin-left: 80px; font-weight: 1000">CodeTrainer</a></h1>
+      <h1>
+        <a href="/" style="color: white; margin-left: 80px; font-weight: 1000"
+          >CodeTrainer</a
+        >
+      </h1>
       <p style="margin-left: 80px">
         Entwickeln Sie Ihre Fähigkeiten ohne Fleiß.
       </p>
-      <center><input class="btntrans" type="button" value="Discord" style="position: absolute; bottom: 8vh; left: 50%; margin-left: -108.5px" onclick="openDiscord()" /></center>
-      <h1 style="float: right; margin-top: -100px; margin-right: 80px; font-weight: 1000">
+      <center>
+        <input
+          class="btntrans"
+          type="button"
+          value="Discord"
+          style="
+            position: absolute;
+            bottom: 8vh;
+            left: 50%;
+            margin-left: -108.5px;
+          "
+          onclick="openDiscord()"
+        />
+      </center>
+      <h1
+        style="
+          float: right;
+          margin-top: -100px;
+          margin-right: 80px;
+          font-weight: 1000;
+        "
+      >
         Kontaktiere Uns
-      </h1><br>
-      <a href="mailto: s.codetrainer@gmail.com" style="float: right; margin-top: -60px; margin-right: 160px; color: white">Email</a>
+      </h1>
+      <br />
+      <a
+        href="mailto: s.codetrainer@gmail.com"
+        style="
+          float: right;
+          margin-top: -60px;
+          margin-right: 160px;
+          color: white;
+        "
+        >Email</a
+      >
       <p class="copyright">
         ©2022 CodeTrainer, MIT-Lizenz, alle Rechte vorbehalten
       </p>

@@ -22,23 +22,28 @@
         style="width: 10%; height: 10%; margin-left: 5%; margin-top: -1%; cursor: pointer"
         onclick="window.location.reload()"
       />
-      <div class="nav-btn" style="margin-left: -10%">
+      <div class="nav-btn responsive" style="margin-left: -10%">
         <h1><a href="/">CodeTrainer</a></h1>
       </div>
-      <div class="nav-btn">
+      <div class="nav-btn responsive">
         <h2><a href="https://discord.com/invite/R8hwAs9JrE" target="_blank" id="discordbtn">Gemeinschaft</a></h2>
       </div>
-      <div class="nav-btn">
+      <div class="nav-btn responsive">
         <h2 onclick="apologizeDe(this.innerHTML)">Pläne</h2>
       </div>
-      <div class="nav-btn">
+      <div class="nav-btn responsive">
         <h2 onclick="apologizeDe(this.innerHTML)">Entdecken</h2>
       </div>
     </div>
-    <div class="navbar-right">
-      <div class="nav-btn">
+
+        <div class="navbar-right">
+      <div class="nav-btn responsive">
+        <h2><a href="/ga.html">Gaelige</a>&nbsp;</h2>
+      </div>
+      <div class="nav-btn responsive">
         <h2><a href="/en.html">English</a>&nbsp;</h2>
       </div>
+
       <div class="nav-btn loginbtn">
         <h2 onclick="apologizeDe('Anmeldung')" style="width: 140px; text-align: center">&nbsp;Anmeldung&nbsp;</h2>
       </div>
@@ -49,7 +54,7 @@
       </h1>
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
-        class="headerimg"
+        class="headerimg responsive"
       />
       <input class="btntrans" type="button" value="Discord" onclick="openDiscord()" /><br><br><br><br><br>
       <h1 style="margin-right: 0px;">
@@ -76,15 +81,15 @@
       </p>
     </div>-->
     <footer>
-      <h1><a href="/" style="color: white; margin-left: 80px; font-weight: 1000">CodeTrainer</a></h1>
-      <p style="margin-left: 80px">
+      <h1 class="responsive"><a href="/" style="color: white; margin-left: 80px; font-weight: 1000">CodeTrainer</a></h1>
+      <p class="responsive" style="margin-left: 80px">
         Entwickeln Sie Ihre Fähigkeiten ohne Fleiß.
       </p>
-      <center><input class="btntrans" type="button" value="Discord" style="position: absolute; bottom: 8vh; left: 50%; margin-left: -108.5px" onclick="openDiscord()" /></center>
-      <h1 style="float: right; margin-top: -100px; margin-right: 80px; font-weight: 1000">
+      <center><input class="btntrans responsive" type="button" value="Discord" style="position: absolute; bottom: 8vh; left: 50%; margin-left: -108.5px" onclick="openDiscord()" /></center>
+      <h1 class="responsive" style="float: right; margin-top: -100px; margin-right: 80px; font-weight: 1000">
         Kontaktiere Uns
       </h1><br>
-      <a href="mailto: s.codetrainer@gmail.com" style="float: right; margin-top: -60px; margin-right: 160px; color: white">Email</a>
+      <a href="mailto: s.codetrainer@gmail.com" class="email">Email</a>
       <p class="copyright">
         ©2022 CodeTrainer, MIT-Lizenz, alle Rechte vorbehalten
       </p>

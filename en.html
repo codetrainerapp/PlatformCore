@@ -7,6 +7,7 @@
       content="Welcome to a place where you can polish your skills, or learn something new! Welcome to CodeTrainer!"
     />
     <meta name="keywords" content="coding trainer code learning site" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
     <link
       rel="icon"
@@ -19,24 +20,27 @@
     <div class="navbar-left">
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
-        style="width: 10%; height: 10%; margin-left: 5%; margin-top: -1%; cursor: pointer"
+        style="width: 80px; height: 80px; margin-left: 5%; margin-top: -1%; cursor: pointer"
         onclick="window.location.reload()"
       />
-      <div class="nav-btn" style="margin-left: -10%">
-        <h1><a href="/">CodeTrainer</a></h1>
+      <div class="nav-btn responsive" style="margin-left: -10%">
+        <h1><a href="/">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CodeTrainer&nbsp;</a></h1>
       </div>
-      <div class="nav-btn">
-        <h2><a href="https://discord.com/invite/R8hwAs9JrE" target="_blank" id="discordbtn">Community</a></h2>
+      <div class="nav-btn responsive">
+        <h2><a href="https://discord.com/invite/R8hwAs9JrE" target="_blank" id="discordbtn">&nbsp;Community&nbsp;</a></h2>
       </div>
-      <div class="nav-btn">
-        <h2 onclick="apologizeEn(this.innerHTML)">Plans</h2>
+      <div class="nav-btn responsive">
+        <h2 onclick="apologizeEn(this.innerHTML)">&nbsp;Plans&nbsp;</h2>
       </div>
-      <div class="nav-btn">
-        <h2 onclick="apologizeEn(this.innerHTML)">Explore</h2>
+      <div class="nav-btn responsive">
+        <h2 onclick="apologizeEn(this.innerHTML)">&nbsp;Explore&nbsp;</h2>
       </div>
     </div>
     <div class="navbar-right">
-      <div class="nav-btn">
+      <div class="nav-btn responsive">
+        <h2><a href="/ga.html">Gaelige</a>&nbsp;</h2>
+      </div>
+      <div class="nav-btn responsive">
         <h2><a href="/de.html">Deutsch</a>&nbsp;</h2>
       </div>
       <div class="nav-btn loginbtn">
@@ -49,8 +53,9 @@
       </h1>
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
-        class="headerimg"
+        class="headerimg responsive"
       />
+
       <input class="btntrans" type="button" value="Discord" onclick="openDiscord()" /><br><br><br><br><br>
       <h1 style="margin-right: 0px;">
       This site is currently under developement! To follow updates, or to help out if you want to help, please join our discord or go to <a style="color: #0096FF" href="https://codetrainer.42web.io/" target="_blank">https://codetrainer.42web.io/</a>. Happy coding!<br><br> - The CodeTrainer Team
@@ -76,15 +81,15 @@
       </p>
     </div>-->
     <footer>
-      <h1><a href="/" style="color: white; margin-left: 80px; font-weight: 1000">CodeTrainer</a></h1>
-      <p style="margin-left: 80px">
+      <h1 class="responsive"><a href="/" style="color: white; margin-left: 80px; font-weight: 1000">CodeTrainer</a></h1>
+      <p class="responsive" style="margin-left: 80px">
         Develop your Skills without Diligence.
       </p>
-      <center><input class="btntrans" type="button" value="Discord" style="position: absolute; bottom: 8vh; left: 50%; margin-left: -108.5px" onclick="openDiscord()" /></center>
-      <h1 style="float: right; margin-top: -100px; margin-right: 80px; font-weight: 1000">
+      <center><input class="btntrans responsive" type="button" value="Discord" style="position: absolute; bottom: 8vh; left: 50%; margin-left: -108.5px" onclick="openDiscord()" /></center>
+      <h1 style="float: right; margin-top: -100px; margin-right: 80px; font-weight: 1000" class="responsive">
         Contact Us
       </h1><br>
-      <a href="mailto: s.codetrainer@gmail.com" style="float: right; margin-top: -60px; margin-right: 125px; color: white">Email</a>
+      <a href="mailto: s.codetrainer@gmail.com" class="email">Email</a>
       <p class="copyright">
         ©2022 CodeTrainer, MIT License, all rights reserved
       </p>
