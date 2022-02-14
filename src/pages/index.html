@@ -22,7 +22,11 @@
         window.navigator.language.split("")[0] +
         window.navigator.language.split("")[1];
       var lang = window.navigator.language;
-      if (langS == "en" || langS == "de" || langS == "ga") {
+      if (
+        langS == "en" || 
+        langS == "de"
+        <!-- || langS == "ga" -->
+      ) {
         window.location.href = "/" + lang + "/landing";
       } else {
         window.location.href = "/lu";
