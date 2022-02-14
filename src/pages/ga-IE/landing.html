@@ -4,30 +4,16 @@
     <title>CodeTrainer</title>
     <meta
       name="description"
-      content="Willkommen an einem Ort, an dem Sie Ihre Fähigkeiten verbessern oder etwas Neues lernen können! Willkommen bei CodeTrainer!"
+      content="fáilte romhat chuig áit inar féidir leat snas a chur ar do chuid scileanna, nó rud éigin nua a fhoghlaim! Fáilte go dtí CodeTrainer!"
     />
-    <meta
-      name="keywords"
-      content="Kodierung trainer code Lernen Webseite Programmierung"
-    />
-    <link href="style.css" rel="stylesheet" />
+    <meta name="keywords" content="coding trainer code learning site" />
+    <link href="../style.css" rel="stylesheet" />
     <link
       rel="icon"
       href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
       type="image/png"
     />
     <script src="./front.js"></script>
-    <script>
-      var langS =
-        window.navigator.language.split("")[0] +
-        window.navigator.language.split("")[1];
-      var lang = window.navigator.language;
-      if (langS == "en" || langS == "de" || langS == "ga") {
-        window.location.href = "/" + lang + "/landing";
-      } else {
-        window.location.href = "/lu";
-      }
-    </script>
   </head>
   <body>
     <div class="navbar-left">
@@ -51,43 +37,42 @@
             href="https://discord.com/invite/R8hwAs9JrE"
             target="_blank"
             id="discordbtn"
-            >Gemeinschaft</a
+            >Pobal</a
           >
         </h2>
       </div>
       <div class="nav-btn responsive">
-        <h2 onclick="apologizeDe(this.innerHTML)">Pläne</h2>
+        <h2 onclick="apologizeEn(this.innerHTML)">Pleananna</h2>
       </div>
       <div class="nav-btn responsive">
-        <h2 onclick="apologizeDe(this.innerHTML)">Entdecken</h2>
+        <h2 onclick="apologizeEn(this.innerHTML)">Iniúchadh</h2>
       </div>
     </div>
-
     <div class="navbar-right">
       <div class="nav-btn responsive">
-        <h2><a href="/ga-IE/landing">Gaelige</a>&nbsp;</h2>
+        <h2><a href="/de-DE/landing">Deutsch</a>&nbsp;</h2>
       </div>
       <div class="nav-btn responsive">
         <h2><a href="/en-US/landing">English</a>&nbsp;</h2>
       </div>
-
       <div class="nav-btn loginbtn">
         <h2
-          onclick="apologizeDe('Anmeldung')"
+          onclick="apologizeEn('Sign Up')"
           style="width: 140px; text-align: center"
         >
-          &nbsp;Anmeldung&nbsp;
+          &nbsp;Clarú&nbsp;
         </h2>
       </div>
     </div>
     <div class="fancyrect">
       <h1 class="title" style="margin-left: 30px">
-        <b>Entwickeln Sie Ihre<br />Fähigkeiten ohne Fleiß.</b>
+        <b>Forbair do Scileanna<br />gan dúthracht.</b>
       </h1>
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
         class="headerimg responsive"
       />
+
       <input
         class="btntrans"
         type="button"
@@ -95,16 +80,16 @@
         onclick="openDiscord()"
       /><br /><br /><br /><br /><br />
       <h1 style="margin-right: 0px">
-        Diese Seite befindet sich derzeit im Aufbau! Um Updates zu verfolgen
-        oder zu helfen, wenn Sie helfen möchten, treten Sie bitte unserem
-        Discord bei oder gehen Sie zu
+        Tá an suíomh seo á fhorbairt faoi láthair! Chun nuashonruithe a
+        leanúint, nó chun cabhrú leat más mian leat cabhrú, le do thoil bheith
+        páirteach inár discord nó téigh go dtí
         <a
           style="color: #0096ff"
           href="https://codetrainer.42web.io/"
           target="_blank"
           >https://codetrainer.42web.io/</a
-        >. Fröhliches Programmieren!<br /><br />
-        - Das CodeTrainer Team
+        >. HCódú sásta!<br /><br />
+        - Foireann CodeTrainer
       </h1>
       <br /><br /><br /><br /><br />
     </div>
@@ -134,7 +119,7 @@
         >
       </h1>
       <p class="responsive" style="margin-left: 80px">
-        Entwickeln Sie Ihre Fähigkeiten ohne Fleiß.
+        Forbair do Scileanna gan Díchill.
       </p>
       <center>
         <input
@@ -151,20 +136,20 @@
         />
       </center>
       <h1
-        class="responsive"
         style="
           float: right;
           margin-top: -100px;
           margin-right: 80px;
           font-weight: 1000;
         "
+        class="responsive"
       >
-        Kontaktiere Uns
+        Glaoigh Orainn
       </h1>
       <br />
       <a href="mailto: s.codetrainer@gmail.com" class="email">Email</a>
       <p class="copyright">
-        ©2022 CodeTrainer, MIT-Lizenz, alle Rechte vorbehalten
+        ©2022 CodeTrainer, Ceadúnas MIT, gach ceart ar cosaint
       </p>
     </footer>
   </body>

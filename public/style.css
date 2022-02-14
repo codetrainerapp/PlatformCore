@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 
 body {
   font-family: "Jost", sans-serif;
@@ -96,9 +96,9 @@ a {
   font-weight: bolder;
   font-size: 64px;
   line-height: 92px;
-  transform: scale(1.1, .85);
+  transform: scale(1.1, 0.85);
   margin-left: 75px;
-  color: #1C3488;
+  color: #1c3488;
 }
 
 .bolder {
@@ -159,12 +159,12 @@ footer {
   .responsive {
     display: none;
   }
-  
+
   .email {
     margin-top: 0px;
     margin-right: calc(50% - 50px);
   }
-  
+
   .title {
     font-size: 40pt;
     margin-bottom: 100px;

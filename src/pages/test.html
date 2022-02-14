@@ -1,18 +1,11 @@
 <script>
-  async function translate() {
-    const res = await fetch("https://libretranslate.de/translate", {
-      method: "POST",
-      body: JSON.stringify({
-        q: "We are sorry, your language is not supported. More languages will be supported in the future. Please continue in either German, English, or Gaelic. Thank you.",
-        source: "en",
-        target: window.navigator.language.split("")[0]+window.navigator.language.split("")[1],
-        format: "text"
-      }),
-      headers: { "Content-Type": "application/json" }
-    });
-    
-    var output = await res.json();
-
-    console.log(output.translatedText);
-  }
-</script>
+      var langS =
+        window.navigator.language.split("")[0] +
+        window.navigator.language.split("")[1];
+      var lang = window.navigator.language;
+      if (langS == "en" || langS == "de" || langS == "ga") {
+        window.location.href = "/" + lang + "/landing";
+      } else {
+        window.location.href = "/lu";
+      }
+    </script>

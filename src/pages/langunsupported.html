@@ -10,7 +10,7 @@
       name="keywords"
       content="Kodierung trainer code Lernen Webseite Programmierung"
     />
-    <link href="style.css" rel="stylesheet" />
+    <link href="../style.css" rel="stylesheet" />
     <link
       rel="icon"
       href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
@@ -22,9 +22,11 @@
         const res = await fetch("https://libretranslate.de/translate", {
           method: "POST",
           body: JSON.stringify({
-            q: "We are sorry, your language is not supported. More languages will be supported in the future. Please continue in either German, English, or Gaelic. Thank you.",
+            q: "We are sorry, your language is not supported, and continuing in this language may not be translated correctly. More languages will be supported in the future. Current languages are German, English, or Gaelic. By continuing in this language you may experience incorrect translations. Thank you.",
             source: "en",
-            target: window.navigator.language.split("")[0]+window.navigator.language.split("")[1],
+            target:
+              window.navigator.language.split("")[0] +
+              window.navigator.language.split("")[1],
             format: "text",
           }),
           headers: { "Content-Type": "application/json" },
@@ -70,10 +72,10 @@
     </div>
     <div class="navbar-right">
       <div class="nav-btn responsive">
-        <h2><a href="/ga.html">Gaelige</a>&nbsp;</h2>
+        <h2><a href="/ga-IE.html">Gaelige</a>&nbsp;</h2>
       </div>
       <div class="nav-btn">
-        <h2>English&nbsp;</h2>
+        <h2><a href="/en-US.html">English</a>&nbsp;</h2>
       </div>
       <div class="nav-btn loginbtn">
         <h2
@@ -85,9 +87,7 @@
       </div>
     </div>
     <div class="fancyrect">
-      <h1 class="title" style="margin-left: 30px">
-        <b>Entwickeln Sie Ihre<br />Fähigkeiten ohne Fleiß.</b>
-      </h1>
+      <h1 class="title" style="margin-left: 30px">{{req}}</h1>
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
         class="headerimg"
