@@ -8,6 +8,7 @@
     />
     <meta name="keywords" content="coding trainer code learning site" />
     <link href="../style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="icon"
       href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
@@ -16,7 +17,7 @@
     <script src="../front.js"></script>
   </head>
   <body>
-    <div class="navbar-left">
+    <div class="navbar-left" data-aos="fade-right">
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
         style="
@@ -28,10 +29,10 @@
         "
         onclick="window.location.reload()"
       />
-      <div class="nav-btn responsive" style="margin-left: -10%">
+      <div class="nav-btn responsive" style="margin-left: -10%" data-aos="fade-right">
         <h1><a href="/">CodeTrainer</a></h1>
       </div>
-      <div class="nav-btn responsive">
+      <div class="nav-btn responsive" data-aos="fade-right">
         <h2>
           <a
             href="https://discord.com/invite/R8hwAs9JrE"
@@ -41,21 +42,21 @@
           >
         </h2>
       </div>
-      <div class="nav-btn responsive">
+      <div class="nav-btn responsive" data-aos="fade-right">
         <h2 onclick="apologizeEn(this.innerHTML)">Plans</h2>
       </div>
-      <div class="nav-btn responsive">
+      <div class="nav-btn responsive" data-aos="fade-right">
         <h2 onclick="apologizeEn(this.innerHTML)">Explore</h2>
       </div>
     </div>
     <div class="navbar-right">
-      <div class="nav-btn responsive">
+      <!--<div class="nav-btn responsive" data-aos="fade-right">
         <h2><a href="/ga-IE/landing">Gaelige</a>&nbsp;</h2>
-      </div>
-      <div class="nav-btn responsive">
+      </div>-->
+      <div class="nav-btn responsive" data-aos="fade-right">
         <h2><a href="/de-DE/landing">Deutsch</a>&nbsp;</h2>
       </div>
-      <div class="nav-btn loginbtn">
+      <div class="nav-btn loginbtn" data-aos="fade-right">
         <h2
           onclick="apologizeEn('Sign Up')"
           style="width: 140px; text-align: center"
@@ -64,7 +65,14 @@
         </h2>
       </div>
     </div>
-    <div class="fancyrect">
+  
+   
+
+    <div class="fancyrect" data-aos="fade-right">
+      
+  
+      
+  
       <h1 class="title" style="margin-left: 30px">
         <b>Develop your Skills<br />without Diligence.</b>
       </h1>
@@ -123,6 +131,9 @@
         Develop your Skills without Diligence.
       </p>
       <center>
+        
+ 
+        
         <input
           class="btntrans responsive"
           type="button"
@@ -148,10 +159,17 @@
         Contact Us
       </h1>
       <br />
-      <a href="mailto: s.codetrainer@gmail.com" class="email">Email</a>
+      <a href="mailto: codetrainersupport@pm.me" class="email">Email</a>
       <p class="copyright">
         ©2022 CodeTrainer, MIT License, all rights reserved
       </p>
     </footer>
   </body>
 </html>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500,
+    once: true,
+  });
+</script>

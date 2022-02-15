@@ -38,7 +38,10 @@ fastify.get("/en-US/:page", function (request, reply) {
 
 fastify.get("/de-DE/landing", function (request, reply) {
   // request.query.paramName <-- a querystring example
-  reply.view("/src/pages/de-DE/landing.html");
+  let params = {
+    lu: false
+  };
+  reply.view("/src/pages/de-DE/landing.html", params);
 });
 
 fastify.get("/ga-IE/landing", function (request, reply) {
@@ -48,8 +51,23 @@ fastify.get("/ga-IE/landing", function (request, reply) {
 
 fastify.get("/lu", function (request, reply) {
 // request.query.paramName <-- a querystring example
-  reply.view("/src/pages/langunsupported.html");
+  let params = {
+    lu: true
+  };
+  reply.view("/src/pages/de-DE/landing.html", params);
 });
+
+fastify.setNotFoundHandler(function (request, reply) {
+    reply.view("/src/pages/404.html");
+})
+
+fastify.register(function (instance, options, done) {
+  instance.setNotFoundHandler(function (request, reply) {
+    // Handle not found request without preValidation and preHandler hooks
+    // to URLs that begin with '/v1'
+  })
+  done()
+}, { prefix: '/v1' })
 
 // A POST route to handle form submissions
 fastify.post("/", function (request, reply) {
