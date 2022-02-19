@@ -1,4 +1,4 @@
-const path = require("path");
+ const path = require("path");
 
 var mysql = require("mysql");
 
@@ -42,6 +42,14 @@ fastify.get("/de-DE/landing", function (request, reply) {
     lu: false
   };
   reply.view("/src/pages/de-DE/landing.html", params);
+});
+
+fastify.get("/courses/html", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  let params = {
+    lessonname: ["What is HTML?", "The basics of tags"]
+  };
+  reply.view("/src/pages/course.html", params);
 });
 
 fastify.get("/ga-IE/landing", function (request, reply) {
