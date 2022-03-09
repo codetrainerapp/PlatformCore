@@ -7,14 +7,14 @@
       content="Welcome to a place where you can polish your skills, or learn something new! Welcome to CodeTrainer!"
     />
     <meta name="keywords" content="coding trainer code learning site" />
-    <link href="../style.css" rel="stylesheet" />
+    <link href="../../style.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="icon"
       href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
       type="image/png"
     />
-    <script src="../front.js"></script>
+    <script src="../../front.js"></script>
   </head>
   <body>
     <div class="navbar-left" data-aos="fade-right">
@@ -46,7 +46,7 @@
         <h2 onclick="apologizeEn(this.innerHTML)">Plans</h2>
       </div>
       <div class="nav-btn responsive" data-aos="fade-right">
-        <h2 onclick="apologizeEn(this.innerHTML)">Explore</h2>
+        <h2><a href="#">Explore</a></h2>
       </div>
     </div>
     <div class="navbar-right">
@@ -68,19 +68,63 @@
     
     
     <!-- Page Body -->
-    <div style="padding-top: 100px">
-    <div class="unit-container">
-      <div class="lesson-container">
-        <h1 id="lesson-1name">
+    <div style="padding-top: 100px; padding-bottom: 150px;" data-aos="fade-right">
+      
+      <center>
+        <h1>
+          Explore Courses
         </h1>
-      </div>
+        <div class="langsholder">
+          <a class="lang open" href="/en-US/landing/404" data-aos="fade-up">
+            HTML
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            CSS
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            JavaScript
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            PHP
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Python
+          </a>
+          <a class="lang closed" data-aos="fade-up" >
+            Java
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            C
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            C#
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            C++
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Lua
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Kotlin
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Rust
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Golang
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            .Net
+          </a>
+          <a class="lang closed" data-aos="fade-up">
+            Swift
+          </a>
+        </div>
+      </center>
+      
     </div>
-    <script>
-      var lesson1name = document.getElementById("lesson-1name");
-      var lessonnames = "{{lessonname}}";
-      lesson1name.innerHTML = lessonnames.split(",")[0];
-    </script>
-    </div>
+    
     
     <footer>
       <h1 class="responsive">

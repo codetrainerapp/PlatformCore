@@ -19,3 +19,7 @@ function apologizeDe(page) {
 function openDiscord() {
   document.getElementById("discordbtn").click();
 }
+
+if (location.protocol !== 'https:') {
+    location.replace(`https:${location.href.substring(location.protocol.length)}`);
+}

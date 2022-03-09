@@ -29,11 +29,8 @@ fastify.get("/", function (request, reply) {
   reply.view("/src/pages/index.html");
 });
 
-fastify.get("/en-US/:page", function (request, reply) {
-  let params = {
-    req: request,
-  };
-  reply.view("/src/pages/en-US/landing.html", params);
+fastify.get("/en-US/landing", function (request, reply) {
+  reply.view("/src/pages/en-US/landing.html");
 });
 
 fastify.get("/de-DE/landing", function (request, reply) {
@@ -44,18 +41,64 @@ fastify.get("/de-DE/landing", function (request, reply) {
   reply.view("/src/pages/de-DE/landing.html", params);
 });
 
-fastify.get("/courses/html", function (request, reply) {
+fastify.get("/en-US/explore", function (request, reply) {
+  reply.view("/src/pages/en-US/explore.html");
+});
+
+fastify.get("/en-US/courses/html", function (request, reply) {
   // request.query.paramName <-- a querystring example
   let params = {
-    lessonname: ["What is HTML?", "The basics of tags"]
+    lessonname: ["What is HTML?", "The basics of tags"],
+    lessondesc: ["Let's go over some use cases as well as what HTML means.", "How do tags work and what are attributes?"]
   };
-  reply.view("/src/pages/course.html", params);
+  reply.view("/src/pages/en-US/course.html", params);
 });
 
 fastify.get("/ga-IE/landing", function (request, reply) {
   // request.query.paramName <-- a querystring example
   reply.view("/src/pages/ga-IE/landing.html");
 });
+
+fastify.get("/auth", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/auth.html");
+});
+
+fastify.get("/license", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/license.html");
+});
+
+fastify.get("/certifications", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/certifications/certlanding.html");
+});
+
+fastify.get("/certifications/webdeveloper", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/certifications/webdevcert.html");
+});
+
+fastify.get("/about/terms", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/about/termsofservice.html");
+});
+
+fastify.get("/tempnav", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/navbardesign.html");
+});
+
+fastify.get("/trainercss", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/trainer.css");
+});
+
+fastify.get("/trainercss/info", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("src/pages/trainercss.html");
+});
+
 
 fastify.get("/lu", function (request, reply) {
 // request.query.paramName <-- a querystring example

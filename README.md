@@ -1,15 +1,15 @@
 ### CodingTrainer
 
-Developers/Administrators:
-
-https://github.com/orgs/codingtrainer-app/people/hodss
-
-https://github.com/orgs/codingtrainer-app/people/foodcardace
-
-https://github.com/orgs/codingtrainer-app/people/NonzeroCornet
-
 Licensed under the terms of the MIT License
 
-"CodingTrainer" may refer to the CodingTrainer Discord, CodingTrainer Administrators; ace, NonzeroCornet34, hodss, or website/domain.
+"CodingTrainer" may refer to the CodingTrainer Discord, CodingTrainer Administrators;
+
+Developers:
+
+Frontend Developer ThatHod
+
+Backend Developer NonZeroCornet
+
+Frontend Developer polygonpapillon
 
 Copyright (C) 2022 CodingTrainer Technologies, GP
