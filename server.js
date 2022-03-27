@@ -2,6 +2,23 @@
 
 var mysql = require("mysql");
 
+const axios = require("axios");
+
+var userCourseData;
+
+const { Client } = require("pg");
+
+// Create a client using the connection information provided on bit.io.
+const client = new Client({
+  user: "CodeTrainer_demo_db_connection",
+  host: "db.bit.io",
+  database: "bitdotio",
+  password: "3J6Aq_zgHd9USQbTExT9jh7uwBDKJ",
+  port: 5432,
+});
+client.connect().catch((e) => {});
+client.on("error", (e) => {});
+
 // Require the fastify framework and instantiate it
 const fastify = require("fastify")({
   // set this to true for detailed logging:
@@ -24,13 +41,68 @@ fastify.register(require("point-of-view"), {
   },
 });
 
-// Our main GET home page route, pulls from src/pages/index.hbs
 fastify.get("/", function (request, reply) {
-  reply.view("/src/pages/index.html");
+  reply.view("/src/pages/index.html", {client_id: process.env.Client_ID});
+});
+
+var access_token = "";
+
+//Our callback route.
+fastify.get("/github/callback", function (req, res) {
+  const requestToken = req.query.code;
+
+  axios({
+    method: "post",
+    url: `https://github.com/login/oauth/access_token?client_id=${process.env.Client_ID}&client_secret=${process.env.Client_Secret}&code=${requestToken}`,
+    headers: {
+      accept: "application/json",
+    },
+  }).then((response) => {
+    access_token = response.data.access_token;
+    res.redirect("/success");
+  });
+});
+
+fastify.get("/success", function (req, res) {
+  axios({
+    method: "get",
+    url: `https://api.github.com/user`,
+    headers: {
+      Authorization: "token " + access_token,
+    },
+  }).then((response) => {
+    client.query(
+      'SELECT courses FROM "CodeTrainer/codetrainermain"."userdata" WHERE EXISTS (SELECT username FROM "CodeTrainer/codetrainermain"."userdata" WHERE username=\'' +
+        response.data.name +
+        "');",
+      (err, respo) => {
+        if (respo == undefined || respo.rowCount == 0) {
+          client.query(
+            'INSERT INTO "CodeTrainer/codetrainermain"."userdata" (username, courses) VALUES (\'' +
+              response.data.name +
+              '\', \'{"html": 0}\');',
+            (err, resp) => {});
+        } else {
+          userCourseData = respo.rows[0].courses;
+          console.log(userCourseData);
+        }
+        userCourseData = JSON.stringify(userCourseData);
+        console.log(userCourseData);
+        res.view("src/pages/auth.html", {
+          userData: response.data,
+          userCourses: userCourseData != undefined ? JSON.stringify(userCourseData) : "{html: 0}",
+        });
+      }
+    );
+  });
+});
+
+fastify.get("/test/code/azh", function (request, reply) {
+  reply.view("/src/pages/test.html", {client_id: process.env.Client_ID});
 });
 
 fastify.get("/en-US/landing", function (request, reply) {
-  reply.view("/src/pages/en-US/landing.html");
+  reply.view("/src/pages/en-US/landing.html", {client_id: process.env.Client_ID});
 });
 
 fastify.get("/de-DE/landing", function (request, reply) {
@@ -135,6 +207,5 @@ fastify.listen(process.env.PORT, "0.0.0.0", function (err, address) {
     fastify.log.error(err);
     process.exit(1);
   }
-  console.log(`Your app is listening on ${address}`);
   fastify.log.info(`server listening on ${address}`);
 });

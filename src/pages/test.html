@@ -1,11 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodeTrainer - Landing</title>
+    <!-- BE GOOD - hod
+
+ Read this if you want to use our source code:
+
+https://codetrainer.glitch.me/license
+
+-->
+    <meta
+      name="description"
+      content="Welcome to a place where you can polish your skills, or learn something new! Welcome to CodeTrainer!"
+    />
+    <meta name="keywords" content="coding trainer code learning site" />
+    <link href="../../style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
+      type="image/png"
+    />
+    <script src="../../front.js"></script>
+  </head>
+  <body>
+    <div class="navbar-left" data-aos="fade-right">
+      <img
+        src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
+        style="
+          width: 10%;
+          height: 10%;
+          margin-left: 5%;
+          margin-top: -1%;
+          cursor: pointer;
+        "
+        onclick="window.location.reload()"
+      />
+      <div
+        class="nav-btn responsive"
+        style="margin-left: -10%"
+        data-aos="fade-right"
+      >
+        <h1><a href="/">CodeTrainer</a></h1>
+      </div>
+      <div class="nav-btn responsive" data-aos="fade-right">
+        <h2>
+          <a
+            href="https://discord.com/invite/R8hwAs9JrE"
+            target="_blank"
+            id="discordbtn"
+            >Community</a
+          >
+        </h2>
+      </div>
+      <div class="nav-btn responsive" data-aos="fade-right">
+        <h2 onclick="apologizeEn(this.innerHTML)">Plans</h2>
+      </div>
+      <div class="nav-btn responsive" data-aos="fade-right">
+        <h2>
+          <a href="/en-US/explore"> Explore </a>
+        </h2>
+      </div>
+    </div>
+    <div class="navbar-right">
+      <!--<div class="nav-btn responsive" data-aos="fade-right">
+        <h2><a href="/ga-IE/landing">Gaelige</a>&nbsp;</h2>
+      </div>-->
+      <div class="nav-btn responsive" data-aos="fade-right">
+        <h2><a href="/de-DE/landing">Deutsch</a>&nbsp;</h2>
+      </div>
+      <a href="https://github.com/login/oauth/authorize?client_id={{client_id}}"
+        ><div class="nav-btn loginbtn" data-aos="fade-right">
+          <h2 style="width: 140px; text-align: center">&nbsp;Sign Up&nbsp;</h2>
+        </div></a
+      >
+    </div>
+
+    <div class="fancyrect" data-aos="fade-right">
+      <h1 class="title" style="margin-left: 30px">
+        <b>Develop your Skills<br />without Diligence.</b>
+      </h1>
+      <img
+        src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/113664db-9313-4273-91d3-33bee87e7b98.image.png"
+        class="headerimg responsive"
+      />
+
+      <input
+        class="btntrans"
+        type="button"
+        value="Discord"
+        onclick="openDiscord()"
+      /><br /><br /><br /><br /><br />
+      <h1 style="margin-right: 0px">
+        This site is currently under developement! To follow updates, or to help
+        out if you want to help, please join our discord or go to
+        <a
+          style="color: #0096ff"
+          href="https://codetrainer.42web.io/"
+          target="_blank"
+          >https://codetrainer.42web.io/</a
+        >. Happy coding!<br /><br />
+        - The CodeTrainer Team
+      </h1>
+      <a
+        href="https://raw.githubusercontent.com/codetrainerapp/FrontendBase/glitch/LICENSE.md"
+        style="font-size: 1px"
+        >License</a
+      >
+      <a href="https://github.com/codetrainerapp/" style="font-size: 1px"
+        >Github</a
+      >
+
+      <!-- Temp sitemap for mobile -->
+      <h1>
+        Site Map
+        <br />
+        <a
+          class="smc"
+          href="https://discord.com/invite/R8hwAs9JrE"
+          target="_blank"
+          >Community</a
+        >
+        <br />
+        <a href="/en-US/404" class="smc"> Explore Courses </a>
+        <br />
+        <a href="/#" class="smc"> Signup (incomplete) </a>
+        <br />
+        <a href="/de-DE/landing" class="smc"> Deutsch (incomplete) </a>
+        <br />
+      </h1>
+      <br />
+      <br />
+      <br />
+
+      <br /><br /><br /><br /><br />
+    </div>
+
+    <!-- This is just temporary until release -->
+    <!-- <h1 style="position: absolute; top: 50%; left: 80px; margin-right: 0px;">
+      This site is currently under developement! To follow updates, or to help out if you want to help, please join our discord or go to <a style="color: #0096FF" href="https://codetrainer.42web.io/" target="_blank">https://codetrainer.42web.io/</a>. Happy coding!<br><br> - The CodeTrainer Team
+    </h1> -->
+
+    <!-- This will happen once we figure everything out and, more likely, upon release.
+    <div style="position: absolute; top: 50%; left: 40px">
+      <p class="header2 bolder">
+        <strong>Why we<br />are better<br />than others</strong>
+      </p>
+      <br />
+    </div>
+    <div style="top: 80%; left: 80px" class="description">
+      <p>
+        On the other hand, we denounce with<br />righteosus induction and
+        dislike wo hare<br />so beguiled and demoralized
+      </p>
+    </div>-->
+    <footer>
+      <h1 class="responsive">
+        <a href="/" style="color: white; margin-left: 80px; font-weight: 1000"
+          >CodeTrainer</a
+        >
+      </h1>
+      <p class="responsive" style="margin-left: 80px; margin-top: -20px">
+        Proudly supported by
+        <a
+          href="https://coding-community.com/"
+          target="_blank"
+          style="color: blue"
+          >Coding-Community</a
+        ><br />and
+        <a href="discord.gg/rgVRaY8GHM" target="_blank" style="color: blue"
+          >Periapsis Studios</a
+        >
+      </p>
+      <center>
+        <input
+          class="btntrans responsive"
+          type="button"
+          value="Discord"
+          style="
+            position: absolute;
+            bottom: 8vh;
+            left: 50%;
+            margin-left: -108.5px;
+          "
+          onclick="openDiscord()"
+        />
+      </center>
+      <h1
+        style="
+          float: right;
+          margin-top: -100px;
+          margin-right: 80px;
+          font-weight: 1000;
+        "
+        class="responsive"
+      >
+        Contact Us
+      </h1>
+      <br />
+      <a href="mailto: codetrainersupport@pm.me" class="email">Email</a>
+      <p class="copyright">
+        ©2022 CodeTrainer, MIT License, all rights reserved
+      </p>
+    </footer>
+  </body>
+</html>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-      var langS =
-        window.navigator.language.split("")[0] +
-        window.navigator.language.split("")[1];
-      var lang = window.navigator.language;
-      if (langS == "en" || langS == "de" || langS == "ga") {
-        window.location.href = "/" + lang + "/landing";
-      } else {
-        window.location.href = "/lu";
-      }
-    </script>
+  AOS.init({
+    duration: 1500,
+    once: true,
+  });
+</script>

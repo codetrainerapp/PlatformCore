@@ -1,11 +1,13 @@
 dependencies:
-  fastify: 3.27.2
+  axios: 0.26.1
+  fastify: 3.27.4
   fastify-formbody: 5.2.0
-  fastify-static: 4.5.0
+  fastify-static: 4.6.1
   handlebars: 4.7.7
   mysql: 2.18.1
   passport: 0.5.2
-  point-of-view: 5.1.0
+  pg: 8.7.3
+  point-of-view: 5.2.0
 packages:
   /@fastify/ajv-compiler/1.1.0:
     dependencies:
@@ -26,7 +28,7 @@ packages:
     dev: false
     resolution:
       integrity: sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
-  /ajv/8.10.0:
+  /ajv/8.11.0:
     dependencies:
       fast-deep-equal: 3.1.3
       json-schema-traverse: 1.0.0
@@ -34,7 +36,7 @@ packages:
       uri-js: 4.4.1
     dev: false
     resolution:
-      integrity: sha512-bzqAEZOjkrUMl2afH8dknrq5KEk2SrwdBROR+vH1EKVQTqaUbJVPdc/gEdggTMM0Se+s+Ja4ju4TlNcStKl2Hw==
+      integrity: sha512-wGgprdCvMalC0BztXvitD2hC04YffAvtsUn93JbGXYLAtCUO4xd17mCCZQxUOItiBwZvJScWo8NIvQMQ71rdpg==
   /archy/1.0.0:
     dev: false
     resolution:
@@ -45,15 +47,21 @@ packages:
       node: '>=8.0.0'
     resolution:
       integrity: sha512-kNOjDqAh7px0XWNI+4QbzoiR/nTkHAWNud2uvnJquD1/x5a7EQZMJT0AczqK0Qn67oY/TTQ1LbUKajZpp3I9tQ==
-  /avvio/7.2.2:
+  /avvio/7.2.5:
     dependencies:
       archy: 1.0.0
-      debug: 4.3.3
+      debug: 4.3.4
       fastq: 1.13.0
       queue-microtask: 1.2.3
     dev: false
     resolution:
-      integrity: sha512-XW2CMCmZaCmCCsIaJaLKxAzPwF37fXi1KGxNOvedOpeisLdmxZnblGc3hpHWYnlP+KOUxZsazh43WXNHgXpbqw==
+      integrity: sha512-AOhBxyLVdpOad3TujtC9kL/9r3HnTkxwQ5ggOsYrvvZP1cCFvzHWJd5XxZDFuTn+IN8vkKSG5SEJrd27vCSbeA==
+  /axios/0.26.1:
+    dependencies:
+      follow-redirects: 1.14.9
+    dev: false
+    resolution:
+      integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==
   /balanced-match/1.0.2:
     dev: false
     resolution:
@@ -69,18 +77,24 @@ packages:
     dev: false
     resolution:
       integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
+  /buffer-writer/2.0.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-a7ZpuTZU1TRtnwyCNW3I5dc0wWNC3VR9S++Ewyk2HHZdrO3CQJqSpd+95Us590V6AL7JqUAH2IwZ/398PmNFgw==
   /concat-map/0.0.1:
     dev: false
     resolution:
       integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
-  /content-disposition/0.5.3:
+  /content-disposition/0.5.4:
     dependencies:
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-ExO0774ikEObIAEV9kDo50o+79VCUdEB6n6lzKgGwupcVeRlhrj3qGAfwq8G6uBJjkqLrhT0qEYFcWng8z1z0g==
+      integrity: sha512-FveZTNuGw04cxlAiWbzi6zTAL/lhehaWbTtgluJh4/E95DqMwTmha3KZN1aAWA8cFIhHzMZUvLevkw5Rqk+tSQ==
   /cookie/0.4.2:
     dev: false
     engines:
@@ -97,14 +111,14 @@ packages:
     dev: false
     resolution:
       integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==
-  /debug/4.3.3:
+  /debug/4.3.4:
     dependencies:
       ms: 2.1.2
     dev: false
     engines:
       node: '>=6.0'
     resolution:
-      integrity: sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
+      integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   /deepmerge/4.2.2:
     dev: false
     engines:
@@ -170,12 +184,12 @@ packages:
       node: '>= 10.0.0'
     resolution:
       integrity: sha512-ar+hQ4+OIurUGjSJD1anvYSDcUflywhKjfxnsW4TBTD7+u0tJufv6DKRWoQk3vI6YBOWMoz0TQtfbe7dxbQmvA==
-  /fast-redact/3.1.0:
+  /fast-redact/3.1.1:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-dir8LOnvialLxiXDPESMDHGp82CHi6ZEYTVkcvdn5d7psdv9ZkkButXrOeXST4aqreIRR+N7CYlsrwFuorurVg==
+      integrity: sha512-odVmjC8x8jNeMZ3C+rPMESzXVSEU8tSWSHv9HFxP2mm89G/1WwqhrerJDQm9Zus8X6aoRgQDThKqptdNA6bt+A==
   /fast-safe-stringify/2.1.1:
     dev: false
     resolution:
@@ -198,38 +212,38 @@ packages:
     dev: false
     resolution:
       integrity: sha512-qKcDXmuZadJqdTm6vlCqioEbyewF60b/0LOFCcYN1B6BIZGlYJumWWOYs70SFYLDAH4YqdE1cxH/RKMG7rFxgA==
-  /fastify-static/4.5.0:
+  /fastify-static/4.6.1:
     dependencies:
-      content-disposition: 0.5.3
+      content-disposition: 0.5.4
       encoding-negotiator: 2.0.1
-      fastify-plugin: 3.0.0
+      fastify-plugin: 3.0.1
       glob: 7.2.0
       p-limit: 3.1.0
       readable-stream: 3.6.0
-      send: 0.17.1
+      send: 0.17.2
     dev: false
     resolution:
-      integrity: sha512-Q7Tgl55AjsmBwiO4hKYib2BUCt+XTWLJ6Xp8YPPHU3EsrKNpevJ4cz8pjf1Ey1QhHw9O8Y2FDKdu+IC74oHvqw==
-  /fastify/3.27.2:
+      integrity: sha512-vy7N28U4AMhuOim12ZZWHulEE6OQKtzZbHgiB8Zj4llUuUQXPka0WHAQI3njm1jTCx4W6fixUHfpITxweMtAIA==
+  /fastify/3.27.4:
     dependencies:
       '@fastify/ajv-compiler': 1.1.0
       abstract-logging: 2.0.1
-      avvio: 7.2.2
+      avvio: 7.2.5
       fast-json-stringify: 2.7.13
       fastify-error: 0.3.1
       find-my-way: 4.5.1
       flatstr: 1.0.12
-      light-my-request: 4.8.0
+      light-my-request: 4.9.0
       pino: 6.14.0
       process-warning: 1.0.0
       proxy-addr: 2.0.7
       rfdc: 1.3.0
       secure-json-parse: 2.4.0
       semver: 7.3.5
-      tiny-lru: 8.0.1
+      tiny-lru: 8.0.2
     dev: false
     resolution:
-      integrity: sha512-InZSbbfdBV8yfsTzX0Ei7aF3r7FjC+DPIf27IlTP5EIhSsvTjvlRNwxDPYYGi2NX2K654Vh+zCGCy/GaSigIuw==
+      integrity: sha512-SOfnHBxG9zxCSIvt6aHoR/cao8QBddWmGP/mb5KQKRc+KI1kB7b79M2hCDOTSyHdLAF2OX+oI6X3weeLc+MqKg==
   /fastq/1.13.0:
     dependencies:
       reusify: 1.0.4
@@ -251,6 +265,12 @@ packages:
     dev: false
     resolution:
       integrity: sha512-4zPxDyhCyiN2wIAtSLI6gc82/EjqZc1onI4Mz/l0pWrAlsSfYH/2ZIcU+e3oA2wDwbzIWNKwa23F8rh6+DRWkw==
+  /follow-redirects/1.14.9:
+    dev: false
+    engines:
+      node: '>=4.0'
+    resolution:
+      integrity: sha512-MQDfihBQYMcyy5dhRDJUHcw7lb2Pv/TuE6xP1vyraLukNDHKbDxDNaOE3NbCAdKQApno+GPRyo1YAp89yCjK4w==
   /forwarded/0.2.0:
     dev: false
     engines:
@@ -272,7 +292,7 @@ packages:
       fs.realpath: 1.0.0
       inflight: 1.0.6
       inherits: 2.0.4
-      minimatch: 3.0.4
+      minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
     dev: false
@@ -296,18 +316,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-0cMsjjIC8I+D3M44pOQdsy0OHXGLVz6Z0beRuufhKa0KfaD2wGwAev6jILzXsd3/vpnNQJmWyZtIILqM1N+n5A==
-  /http-errors/1.7.3:
+  /http-errors/1.8.1:
     dependencies:
       depd: 1.1.2
       inherits: 2.0.4
-      setprototypeof: 1.1.1
+      setprototypeof: 1.2.0
       statuses: 1.5.0
-      toidentifier: 1.0.0
+      toidentifier: 1.0.1
     dev: false
     engines:
       node: '>= 0.6'
     resolution:
-      integrity: sha512-ZTTX0MWrsQ2ZAhA1cejAwDLycFsd7I7nVtnkT3Ol0aqodaKW+0CTZDQ1uBv5whptCnc8e8HeRRJxRs0kmm/Qfw==
+      integrity: sha512-Kpk9Sm7NmI+RHhnj6OIWDI1d6fIoFAtFt9RLaTMRlg/8w49juAStsrBgp0Dp4OdxdVbRIeKhtCUvoi/RuAhO4g==
   /inflight/1.0.6:
     dependencies:
       once: 1.4.0
@@ -337,15 +357,15 @@ packages:
     dev: false
     resolution:
       integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==
-  /light-my-request/4.8.0:
+  /light-my-request/4.9.0:
     dependencies:
-      ajv: 8.10.0
+      ajv: 8.11.0
       cookie: 0.4.2
       process-warning: 1.0.0
       set-cookie-parser: 2.4.8
     dev: false
     resolution:
-      integrity: sha512-C2XESrTRsZnI59NSQigOsS6IuTxpj8OhSBvZS9fhgBMsamBsAuWN1s4hj/nCi8EeZcyAA6xbROhsZy7wKdfckg==
+      integrity: sha512-b1U3z4OVPoO/KanT14NRkXMr9rRtXAiq0ORqNrqhDyb5bGkZjAdEc6GRN1GWCfgaLBG+aq73qkCLDNeB3c2sLw==
   /lru-cache/6.0.0:
     dependencies:
       yallist: 4.0.0
@@ -361,12 +381,12 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-x0Vn8spI+wuJ1O6S7gnbaQg8Pxh4NNHb7KSINmEWKiPE4RKOplvijn+NkmYmmRgP68mc70j2EbeTFRsrswaQeg==
-  /minimatch/3.0.4:
+  /minimatch/3.1.2:
     dependencies:
       brace-expansion: 1.1.11
     dev: false
     resolution:
-      integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+      integrity: sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   /minimist/1.2.5:
     dev: false
     resolution:
@@ -375,14 +395,14 @@ packages:
     dev: false
     resolution:
       integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
-  /ms/2.1.1:
-    dev: false
-    resolution:
-      integrity: sha512-tgp+dl5cGk28utYktBsrFqA7HKgrhgPsg6Z/EfhWI4gl1Hwq8B/GmY/0oXZ6nF8hDVesS/FpnYaD/kOWhYQvyg==
   /ms/2.1.2:
     dev: false
     resolution:
       integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==
+  /ms/2.1.3:
+    dev: false
+    resolution:
+      integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==
   /mysql/2.18.1:
     dependencies:
       bignumber.js: 9.0.0
@@ -420,6 +440,10 @@ packages:
       node: '>=10'
     resolution:
       integrity: sha512-TYOanM3wGwNGsZN2cVTYPArw454xnXj5qmWF1bEoAc4+cU/ol7GVh7odevjp1FNHduHc3KZMcFduxU5Xc6uJRQ==
+  /packet-reader/1.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-HAKu/fG3HpHFO0AA8WE8q2g+gBJaZ9MG7fcKk+IJPLTGAD6Psw4443l+9DGRbOIh3/aXr7Phy0TjilYivJo5XQ==
   /passport-strategy/1.0.0:
     dev: false
     engines:
@@ -445,13 +469,67 @@ packages:
     dev: false
     resolution:
       integrity: sha1-HUCLP9t2kjuVQ9lvtMnf1TXZy10=
+  /pg-connection-string/2.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-r5o/V/ORTA6TmUnyWZR9nCj1klXCO2CEKNRlVuJptZe85QuhFayC7WeMic7ndayT5IRIR0S0xFxFi2ousartlQ==
+  /pg-int8/1.0.1:
+    dev: false
+    engines:
+      node: '>=4.0.0'
+    resolution:
+      integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==
+  /pg-pool/3.5.1:
+    dev: false
+    peerDependencies:
+      pg: '>=8.0'
+    resolution:
+      integrity: sha512-6iCR0wVrro6OOHFsyavV+i6KYL4lVNyYAB9RD18w66xSzN+d8b66HiwuP30Gp1SH5O9T82fckkzsRjlrhD0ioQ==
+  /pg-protocol/1.5.0:
+    dev: false
+    resolution:
+      integrity: sha512-muRttij7H8TqRNu/DxrAJQITO4Ac7RmX3Klyr/9mJEOBeIpgnF8f9jAfRz5d3XwQZl5qBjF9gLsUtMPJE0vezQ==
+  /pg-types/2.2.0:
+    dependencies:
+      pg-int8: 1.0.1
+      postgres-array: 2.0.0
+      postgres-bytea: 1.0.0
+      postgres-date: 1.0.7
+      postgres-interval: 1.2.0
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==
+  /pg/8.7.3:
+    dependencies:
+      buffer-writer: 2.0.0
+      packet-reader: 1.0.0
+      pg-connection-string: 2.5.0
+      pg-pool: 3.5.1
+      pg-protocol: 1.5.0
+      pg-types: 2.2.0
+      pgpass: 1.0.5
+    dev: false
+    engines:
+      node: '>= 8.0.0'
+    peerDependencies:
+      pg-native: '>=2.0.0'
+    resolution:
+      integrity: sha512-HPmH4GH4H3AOprDJOazoIcpI49XFsHCe8xlrjHkWiapdbHK+HLtbm/GQzXYAZwmPju/kzKhjaSfMACG+8cgJcw==
+  /pgpass/1.0.5:
+    dependencies:
+      split2: 4.1.0
+    dev: false
+    resolution:
+      integrity: sha512-FdW9r/jQZhSeohs1Z3sI1yxFQNFvMcnmfuj4WBMUTxOrAyLMaTcE1aAMBiTlbMNaXvBCQuVi0R7hd8udDSP7ug==
   /pino-std-serializers/3.2.0:
     dev: false
     resolution:
       integrity: sha512-EqX4pwDPrt3MuOAAUBMU0Tk5kR/YcCM5fNPEzgCO2zJ5HfX0vbiH9HbJglnyeQsN96Kznae6MWD47pZB5avTrg==
   /pino/6.14.0:
     dependencies:
-      fast-redact: 3.1.0
+      fast-redact: 3.1.1
       fast-safe-stringify: 2.1.1
       flatstr: 1.0.12
       pino-std-serializers: 3.2.0
@@ -462,13 +540,39 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-iuhEDel3Z3hF9Jfe44DPXR8l07bhjuFY3GMHIXbjnY9XcafbyDDwl2sN2vw2GjMPf5Nkoe+OFao7ffn9SXaKDg==
-  /point-of-view/5.1.0:
+  /point-of-view/5.2.0:
     dependencies:
       fastify-plugin: 3.0.1
       hashlru: 2.3.0
     dev: false
     resolution:
-      integrity: sha512-jrQXgIAY4Lv30REMVeLA7vEkpLGREMPjxR4uiD+ysDlgtPqcJH9UBD8qBPBpAHH01XgTmjrle9U4gmjnLCr2XA==
+      integrity: sha512-PYoeqEunutxZTmNih6NXXoz8xZZopzw2MWgBoKPLcofOJNagEoXVpzbHT30AkK/9ArKjJYrvV6iU8JAg87+VMw==
+  /postgres-array/2.0.0:
+    dev: false
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha512-VpZrUqU5A69eQyW2c5CA1jtLecCsN2U/bD6VilrFDWq5+5UIEVO7nazS3TEcHf1zuPYO/sqGvUvW62g86RXZuA==
+  /postgres-bytea/1.0.0:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-AntTPAqokOJtFy1Hz5zOzFIazTU=
+  /postgres-date/1.0.7:
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-suDmjLVQg78nMK2UZ454hAG+OAW+HQPZ6n++TNDUX+L0+uUlLywnoxJKDou51Zm+zTCjrCl0Nq6J9C5hP9vK/Q==
+  /postgres-interval/1.2.0:
+    dependencies:
+      xtend: 4.0.2
+    dev: false
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha512-9ZhXKM/rw350N1ovuWHbGxnGh/SNJ4cnxHiM0rxE4VN41wsg8P8zWn9hv/buK00RP4WvlOyr/RBDiptyxVbkZQ==
   /process-nextick-args/2.0.1:
     dev: false
     resolution:
@@ -582,7 +686,7 @@ packages:
     hasBin: true
     resolution:
       integrity: sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
-  /send/0.17.1:
+  /send/0.17.2:
     dependencies:
       debug: 2.6.9
       depd: 1.1.2
@@ -591,9 +695,9 @@ packages:
       escape-html: 1.0.3
       etag: 1.8.1
       fresh: 0.5.2
-      http-errors: 1.7.3
+      http-errors: 1.8.1
       mime: 1.6.0
-      ms: 2.1.1
+      ms: 2.1.3
       on-finished: 2.3.0
       range-parser: 1.2.1
       statuses: 1.5.0
@@ -601,15 +705,15 @@ packages:
     engines:
       node: '>= 0.8.0'
     resolution:
-      integrity: sha512-BsVKsiGcQMFwT8UxypobUKyv7irCNRHk1T0G680vk88yf6LBByGcZJOTJCrTP2xVN6yI+XjPJcNuE3V4fT9sAg==
+      integrity: sha512-UJYB6wFSJE3G00nEivR5rgWp8c2xXvJ3OPWPhmuteU0IKj8nKbG3DrjiOmLwpnHGYWAVwA69zmTm++YG0Hmwww==
   /set-cookie-parser/2.4.8:
     dev: false
     resolution:
       integrity: sha512-edRH8mBKEWNVIVMKejNnuJxleqYE/ZSdcT8/Nem9/mmosx12pctd80s2Oy00KNZzrogMZS5mauK2/ymL1bvlvg==
-  /setprototypeof/1.1.1:
+  /setprototypeof/1.2.0:
     dev: false
     resolution:
-      integrity: sha512-JvdAWfbXeIGaZ9cILp38HntZSFSo3mWg6xGcJJsd+d4aRMOqauag1C63dJfDw7OaMYwEbHMOxEZ1lqVRYP2OAw==
+      integrity: sha512-E5LDX7Wrp85Kil5bhZv46j8jOeboKq5JMmYM3gVGdGH8xFpPWXUMsNrlODCrkoxMEeNi/XZIwuRvY4XNwYMJpw==
   /sonic-boom/1.4.1:
     dependencies:
       atomic-sleep: 1.0.0
@@ -623,6 +727,12 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==
+  /split2/4.1.0:
+    dev: false
+    engines:
+      node: '>= 10.x'
+    resolution:
+      integrity: sha512-VBiJxFkxiXRlUIeyMQi8s4hgvKCSjtknJv/LVYbrgALPwf5zSKmEwV9Lst25AkvMDnvxODugjdl6KZgwKM1WYQ==
   /sqlstring/2.3.1:
     dev: false
     engines:
@@ -651,18 +761,18 @@ packages:
     dev: false
     resolution:
       integrity: sha512-hkRX8U1WjJFd8LsDJ2yQ/wWWxaopEsABU1XfkM8A+j0+85JAGppt16cr1Whg6KIbb4okU6Mql6BOj+uup/wKeA==
-  /tiny-lru/8.0.1:
+  /tiny-lru/8.0.2:
     dev: false
     engines:
       node: '>=6'
     resolution:
-      integrity: sha512-eBIAYA0BzSjxBedCaO0CSjertD+u+IvNuFkyD7ESf+qjqHKBr5wFqvEYl91+ZQd7jjq2pO6/fBVwFgb6bxvorw==
-  /toidentifier/1.0.0:
+      integrity: sha512-ApGvZ6vVvTNdsmt676grvCkUCGwzG9IqXma5Z07xJgiC5L7akUMof5U8G2JTI9Rz/ovtVhJBlY6mNhEvtjzOIg==
+  /toidentifier/1.0.1:
     dev: false
     engines:
       node: '>=0.6'
     resolution:
-      integrity: sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
+      integrity: sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
   /uglify-js/3.13.3:
     dev: false
     engines:
@@ -689,6 +799,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+  /xtend/4.0.2:
+    dev: false
+    engines:
+      node: '>=0.4'
+    resolution:
+      integrity: sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
   /yallist/4.0.0:
     dev: false
     resolution:
@@ -703,10 +819,12 @@ registry: 'https://registry.npmjs.org/'
 shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
-  fastify: ^3.27.2
+  axios: ^0.26.1
+  fastify: ^3.27.4
   fastify-formbody: ^5.2.0
-  fastify-static: ^4.5.0
+  fastify-static: ^4.6.1
   handlebars: ^4.7.7
   mysql: ^2.18.1
   passport: ^0.5.2
-  point-of-view: ^5.1.0
+  pg: ^8.7.3
+  point-of-view: ^5.2.0

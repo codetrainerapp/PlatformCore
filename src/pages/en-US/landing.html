@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>CodeTrainer - Landing</title>
-<!-- BE GOOD - hod
+    <!-- BE GOOD - hod
 
  Read this if you want to use our source code:
 
@@ -23,7 +23,7 @@ https://codetrainer.glitch.me/license
     />
     <script src="../front.js"></script>
   </head>
-  <body>
+  <body onload="loggedIn()">
     <div class="navbar-left" data-aos="fade-right">
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
@@ -36,7 +36,11 @@ https://codetrainer.glitch.me/license
         "
         onclick="window.location.reload()"
       />
-      <div class="nav-btn responsive" style="margin-left: -10%" data-aos="fade-right">
+      <div
+        class="nav-btn responsive"
+        style="margin-left: -10%"
+        data-aos="fade-right"
+      >
         <h1><a href="/">CodeTrainer</a></h1>
       </div>
       <div class="nav-btn responsive" data-aos="fade-right">
@@ -54,11 +58,8 @@ https://codetrainer.glitch.me/license
       </div>
       <div class="nav-btn responsive" data-aos="fade-right">
         <h2>
-<a href="/en-US/explore">
-
-            Explore
-          </a>
-</h2>
+          <a href="/en-US/explore"> Explore </a>
+        </h2>
       </div>
     </div>
     <div class="navbar-right">
@@ -68,23 +69,16 @@ https://codetrainer.glitch.me/license
       <div class="nav-btn responsive" data-aos="fade-right">
         <h2><a href="/de-DE/landing">Deutsch</a>&nbsp;</h2>
       </div>
-      <div class="nav-btn loginbtn" data-aos="fade-right">
-        <h2
-          onclick="apologizeEn('Sign Up')"
-          style="width: 140px; text-align: center"
-        >
-          &nbsp;Sign Up&nbsp;
-        </h2>
-      </div>
+      <a
+        href="https://github.com/login/oauth/authorize?client_id={{client_id}}"
+        id="login"
+        ><div class="nav-btn loginbtn" data-aos="fade-right">
+          <h2 style="width: 140px; text-align: center">&nbsp;Sign Up&nbsp;</h2>
+        </div></a
+      >
     </div>
-  
-   
 
     <div class="fancyrect" data-aos="fade-right">
-      
-  
-      
-  
       <h1 class="title" style="margin-left: 30px">
         <b>Develop your Skills<br />without Diligence.</b>
       </h1>
@@ -110,37 +104,40 @@ https://codetrainer.glitch.me/license
         >. Happy coding!<br /><br />
         - The CodeTrainer Team
       </h1>
-      <a href="https://raw.githubusercontent.com/codetrainerapp/FrontendBase/glitch/LICENSE.md" style="font-size: 1px">License</a>
-      <a href="https://github.com/codetrainerapp/" style="font-size: 1px">Github</a>
-      
+      <a
+        href="https://raw.githubusercontent.com/codetrainerapp/FrontendBase/glitch/LICENSE.md"
+        style="font-size: 1px"
+        >License</a
+      >
+      <a href="https://github.com/codetrainerapp/" style="font-size: 1px"
+        >Github</a
+      >
 
-<!-- Temp sitemap for mobile -->
-          <h1>
-Site Map
-<br>
-<a
-class="smc"
-href="https://discord.com/invite/R8hwAs9JrE"
-target="_blank">Community</a>        
-<br>
-<a href="/en-US/404" class="smc"> Explore Courses </a>   
-<br>
-<a href="/#" class="smc"> Signup (incomplete) </a>
-<br>
-<a href="/de-DE/landing" class="smc"> Deutsch (incomplete) </a>
-<br>
-    </h1>
-<br> <br> <br>
-      
+      <!-- Temp sitemap for mobile -->
+      <h1>
+        Site Map
+        <br />
+        <a
+          class="smc"
+          href="https://discord.com/invite/R8hwAs9JrE"
+          target="_blank"
+          >Community</a
+        >
+        <br />
+        <a href="/en-US/404" class="smc"> Explore Courses </a>
+        <br />
+        <a href="/#" class="smc"> Signup (incomplete) </a>
+        <br />
+        <a href="/de-DE/landing" class="smc"> Deutsch (incomplete) </a>
+        <br />
+      </h1>
+      <br />
+      <br />
+      <br />
+
       <br /><br /><br /><br /><br />
     </div>
-    
 
-  
-  
-  
-
- 
     <!-- This is just temporary until release -->
     <!-- <h1 style="position: absolute; top: 50%; left: 80px; margin-right: 0px;">
       This site is currently under developement! To follow updates, or to help out if you want to help, please join our discord or go to <a style="color: #0096FF" href="https://codetrainer.42web.io/" target="_blank">https://codetrainer.42web.io/</a>. Happy coding!<br><br> - The CodeTrainer Team
@@ -165,13 +162,19 @@ target="_blank">Community</a>
           >CodeTrainer</a
         >
       </h1>
-      <p class="responsive" style="margin-left: 80px; margin-top: -20px;">
-        Proudly supported by <a href="https://coding-community.com/" target="_blank" style="color: blue">Coding-Community</a><br>and <a href="discord.gg/rgVRaY8GHM" target="_blank" style="color: blue">Periapsis Studios</a>
+      <p class="responsive" style="margin-left: 80px; margin-top: -20px">
+        Proudly supported by
+        <a
+          href="https://coding-community.com/"
+          target="_blank"
+          style="color: blue"
+          >Coding-Community</a
+        ><br />and
+        <a href="discord.gg/rgVRaY8GHM" target="_blank" style="color: blue"
+          >Periapsis Studios</a
+        >
       </p>
       <center>
-        
- 
-        
         <input
           class="btntrans responsive"
           type="button"

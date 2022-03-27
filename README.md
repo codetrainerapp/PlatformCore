@@ -8,8 +8,8 @@ Developers:
 
 Frontend Developer ThatHod
 
-Backend Developer NonZeroCornet
+Full-Stack Developer NonzeroCornet34
 
-Frontend Developer polygonpapillon
+Frontend Developer polygonpapillon (mildly inactive)
 
 Copyright (C) 2022 CodingTrainer Technologies, GP
