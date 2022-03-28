@@ -27,8 +27,7 @@ if (location.protocol !== "https:") {
 }
 function loggedIn() {
   if (getCookie("username") != "") {
-    document.getElementById("login").innerHTML =
-      '<div class="nav-btn loginbtn" data-aos="fade-right"><h2 style="width: 140px; text-align: center">&nbsp;Log Out&nbsp;</h2></div>';
+    document.getElementById("login").firstElementChild.firstElementChild.innerHTML = '&nbsp;Log Out&nbsp;';
     document.getElementById("login").href = "/#";
     document.getElementById("login").onclick = function () {
       document.cookie =

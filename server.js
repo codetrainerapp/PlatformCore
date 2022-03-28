@@ -114,7 +114,7 @@ fastify.get("/de-DE/landing", function (request, reply) {
 });
 
 fastify.get("/en-US/explore", function (request, reply) {
-  reply.view("/src/pages/en-US/explore.html");
+  reply.view("/src/pages/en-US/explore.html", {client_id: process.env.Client_ID});
 });
 
 fastify.get("/en-US/courses/html", function (request, reply) {

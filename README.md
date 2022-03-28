@@ -10,6 +10,6 @@ Frontend Developer ThatHod
 
 Full-Stack Developer NonzeroCornet34
 
-Frontend Developer polygonpapillon (mildly inactive)
+UI/UX Designer Polygonpapillon
 
 Copyright (C) 2022 CodingTrainer Technologies, GP

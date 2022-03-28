@@ -47,7 +47,7 @@ a {
   top: 100px;
   width: 94vw;
   height: 400px;
-  background: linear-gradient(135deg, #ee9ae5 0%, #5961f9 100%);
+  background: linear-gradient(135deg, #0B85E8 10%, white 100%);
   border-radius: 48px 48px 300px 48px;
 }
 
@@ -86,6 +86,31 @@ a {
 .btntrans:hover {
   background-color: white;
   color: black;
+}
+
+.btnpop {
+  position: absolute;
+  width: 205px;
+  height: 48px;
+  border: 0.5px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-color: rgba(100, 100, 100, 0);
+  font-size: 18px;
+  margin-left: 10%;
+  cursor: pointer;
+  transition: color 0.5s, background 0.5s, border 0.5s;
+  color: black;
+  border-color: black;
+  border-width: 5px;
+  font-weight: bold;
+}
+
+.btnpop:hover {
+  background-color: lightgrey;
+  -webkit-text-stroke: 0.5px black;
+  border-color: #44FFD1;
+  color: #44ffd1;
 }
 
 .header2 {

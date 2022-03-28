@@ -23,7 +23,7 @@ https://codetrainer.glitch.me/license
     />
     <script src="../../front.js"></script>
   </head>
-  <body>
+  <body onload="loggedIn()">
     <div class="navbar-left" data-aos="fade-right">
       <img
         src="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
@@ -69,7 +69,9 @@ https://codetrainer.glitch.me/license
       <div class="nav-btn responsive" data-aos="fade-right">
         <h2><a href="/de-DE/landing">Deutsch</a>&nbsp;</h2>
       </div>
-      <a href="https://github.com/login/oauth/authorize?client_id={{client_id}}"
+      <a
+        href="https://github.com/login/oauth/authorize?client_id={{client_id}}"
+        id="login"
         ><div class="nav-btn loginbtn" data-aos="fade-right">
           <h2 style="width: 140px; text-align: center">&nbsp;Sign Up&nbsp;</h2>
         </div></a
@@ -88,12 +90,14 @@ https://codetrainer.glitch.me/license
       <input
         class="btntrans"
         type="button"
-        value="Discord"
-        onclick="openDiscord()"
-      /><br /><br /><br /><br /><br />
+        value="Sign Up"
+        onclick="document.getElementById('login').click()"
+      />
+      <script>document.body.onload += function() {document.getElementsByClassName("btntrans")[0].value = document.getElementById("login").innerHTML;}</script>
+      <br /><br /><br /><br /><br />
       <h1 style="margin-right: 0px">
         This site is currently under developement! To follow updates, or to help
-        out if you want to help, please join our discord or go to
+        out if you want to help, please join our <a href="https://discord.com/invite/R8hwAs9JrE" style="color: #0096ff">discord</a> or go to
         <a
           style="color: #0096ff"
           href="https://codetrainer.42web.io/"
@@ -124,7 +128,7 @@ https://codetrainer.glitch.me/license
         <br />
         <a href="/en-US/404" class="smc"> Explore Courses </a>
         <br />
-        <a href="/#" class="smc"> Signup (incomplete) </a>
+        <a href="https://github.com/login/oauth/authorize?client_id={{client_id}}" class="smc">Signup</a>
         <br />
         <a href="/de-DE/landing" class="smc"> Deutsch (incomplete) </a>
         <br />
