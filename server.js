@@ -6,6 +6,8 @@ const axios = require("axios");
 
 var userCourseData;
 
+require('dotenv').config();
+
 const { Client } = require("pg");
 
 // Create a client using the connection information provided on bit.io.
@@ -129,6 +131,11 @@ fastify.get("/en-US/courses/html", function (request, reply) {
 fastify.get("/ga-IE/landing", function (request, reply) {
   // request.query.paramName <-- a querystring example
   reply.view("/src/pages/ga-IE/landing.html");
+});
+
+fastify.get("/en-US/courses/html/:course", function (request, reply) {
+  // request.query.paramName <-- a querystring example
+  reply.view("/src/pages/en-US/lessons/"+request.params['course']+".html");
 });
 
 fastify.get("/auth", function (request, reply) {

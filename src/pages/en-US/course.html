@@ -96,10 +96,11 @@
       var lessonnames = "{{lessonname}}".split(",");
       var lessondescs = "{{lessondesc}}".split(",");
       for(i=0; i<lessonnames.length; i++) {
-        unit1.innerHTML += "<div class='lesson-container'><h1>"+lessonnames[i]+"</h1><h4>"+lessondescs[i]+"</h4></div><br>";
+        unit1.innerHTML += "<div class='lesson-container' onclick='window.location.href += \"/"+lessonnames[i].split(" ").join("").split("?").join("").toLowerCase()+"\"'><h1>"+lessonnames[i]+"</h1><h4>"+lessondescs[i]+"</h4></div><br>";
       }
     </script>
     </div>
+    <br><br><br><br><br><br>
     
     <footer>
       <h1 class="responsive">

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodeTrainer - Lesson</title>
+    <meta
+      name="description"
+      content="Welcome to a place where you can polish your skills, or learn something new! Welcome to CodeTrainer!"
+    />
+    <meta name="keywords" content="coding trainer code learning site" />
+    <link href="../../../style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="icon"
+      href="https://cdn.glitch.global/14daf2d0-0488-4b16-9d71-e95e4298f1e6/Logo1.png"
+      type="image/png"
+    />
+    <script src="../../../lessons.js"></script>
+    <style>
+      pre code {
+        background-color: #eee;
+        border: 1px solid #999;
+        display: block;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body onload="loggedIn()">
+    <div
+      class="nav-btn loginbtn"
+      style="margin-left: 80px; width: 100px"
+      onclick="history.back()"
+      data-aos="fade-right"
+    >
+      <h2>Go Back</h2>
+    </div>
+    <div class="navbar-right">
+      <a
+        href="https://github.com/login/oauth/authorize?client_id={{client_id}}"
+        id="login"
+        ><div class="nav-btn loginbtn" data-aos="fade-left">
+          <h2 style="width: 140px; text-align: center; margin-top: -50px">
+            &nbsp;Sign Up&nbsp;
+          </h2>
+        </div></a
+      >
+    </div>
+
+    <div
+      style="
+        border: 1px solid black;
+        width: 60%;
+        border-radius: 10px;
+        test-align: left;
+        padding: 10px;
+        position: absolute;
+        left: 18%;
+      "
+      data-aos="fade-up"
+    >
+      <h2>What is HTML?</h2>
+      <center>
+        HTML stands for Hypertext Markup Language. It is a languaged based on
+        structures of elements. An example of this would be:
+      </center>
+      <pre><code><xmp>
+          <p>
+            This is the parent element. It houses a child element.
+            <strong>This is a child element. It's inside of a parent element.</strong>
+          </p>
+          </xmp></code></pre>
+    </div>
+  </body>
+</html>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1500,
+    once: true,
+  });
+</script>

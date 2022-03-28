@@ -1,5 +1,6 @@
 dependencies:
   axios: 0.26.1
+  dotenv: 16.0.0
   fastify: 3.27.4
   fastify-formbody: 5.2.0
   fastify-static: 4.6.1
@@ -135,6 +136,12 @@ packages:
     dev: false
     resolution:
       integrity: sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
+  /dotenv/16.0.0:
+    dev: false
+    engines:
+      node: '>=12'
+    resolution:
+      integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==
   /ee-first/1.1.1:
     dev: false
     resolution:
@@ -820,6 +827,7 @@ shrinkwrapMinorVersion: 9
 shrinkwrapVersion: 3
 specifiers:
   axios: ^0.26.1
+  dotenv: ^16.0.0
   fastify: ^3.27.4
   fastify-formbody: ^5.2.0
   fastify-static: ^4.6.1
